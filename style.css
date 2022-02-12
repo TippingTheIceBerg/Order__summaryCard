@@ -4,26 +4,29 @@
     box-sizing: border-box;
 }
 :root{
-    --bodyColor: hsl(225, 100%, 94%)
+    --bodyColor: hsl(225, 100%, 94%);
     --textColor: hsl(224, 23%, 55%);
+    --shadowColor:  hsl(224,  100%, 90%);
+    --activeColor: rgb(219, 109, 219);
 }
 
 html,body{
+  
     height: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: var(--bodyColor);
-font-family: 'Red Hat Display', sans-serif;
-background:url(./images/pattern-background-mobile.svg) center/cover ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bodyColor);
+    font-family: 'Red Hat Display', sans-serif;
+    background:url(./images/pattern-background-mobile.svg) center/cover no-repeat ;
 
 }
 
 
  /* mobile width*/
 
-@media (min-width: 375px){
+@media (min-width:360px){
     .main__body-flex{
         height: 80%;
         display: flex;
@@ -31,6 +34,7 @@ background:url(./images/pattern-background-mobile.svg) center/cover ;
         align-items: center;
         font-size: 1.2em;
         max-width: 100%;
+
     }
 
     .main__cardBody{
@@ -38,34 +42,46 @@ background:url(./images/pattern-background-mobile.svg) center/cover ;
         border-radius: 20px;
         overflow: hidden;
         background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 1000px 1px var(--shadowColor);
     }
    
-.main__imgContainer{
-    height: 28%;
-}
+    .main__imgContainer{
+        height: 28%;
+    }
+
     .main__img{
-    width: 100%;
-    height: 100%;
+        width: 100%;
+        height: 100%;
        
     }
+
     .main__orderSummary{
  
         font-size: 1.1em;
         text-align: center;
         margin: 30px;
     }
+
     .orderSummary__title{
        padding: 10px;
-    
-     
     }
+
    .orderSummary_paragraph{
        font-size: .8em;
        color:  var(--textColor) ;}
 
+    .containerParagraph__paragraphCost{
+        color:gray;
+    }
+
+    .orderSummary_paragraph{
+        color: gray;
+    }
+
     .main__annualPlan{
 
         background-color: rgba(0 0 0 /.05);
+        border-radius: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -75,17 +91,12 @@ background:url(./images/pattern-background-mobile.svg) center/cover ;
        
 
     }
+
     .annualPlan__icon{
         height: 50px;
 
     }
   
-    .containerParagraph__paragraph{
-        color: var(--textColor)
-    }
-
-    
-
     .main__proceedToPay{
 
         display: flex;
@@ -98,34 +109,80 @@ background:url(./images/pattern-background-mobile.svg) center/cover ;
         font-size: 1.2em;
         margin-bottom: 30px;
         border-radius: 20px;
-       box-shadow:rgb(37 87 195/.4) 0 20px 80px 10px;
-       color: whitesmoke;
-       cursor: pointer;
-       width: 90%;
-       height: 60px;
-
-
-   
+        box-shadow:rgb(37 87 195/.4) 0 20px 80px 1px;
+        color: whitesmoke;
+        cursor: pointer;
+        width: 90%;
+        height: 60px;
     }
 
     .main__cancelOrder{
-      
         text-align: center;
         margin-bottom: 30px;
     }
    
-.cancelOrder__link{
-    text-decoration: none;
-    font-size: 1.2em;
+    .cancelOrder__link{
+        text-decoration: none;
+        font-size: 1.2em;
+        color: var(--textColor);
+        font-weight: 500;
+    }  
+    .cancelOrder__link:active{
+        color: var(--activeColor);
+    }
+    
+
 }
-
-
 
 /* Desktop width */
 
-@media (min-width: 1440px){
-    body{
-        color: red
+@media (min-width: 900px){
+    html,body{
+        background:url(./images/pattern-background-desktop.svg) no-repeat;
+    }
+
+    .main__body-flex{
+        width: 500px;   
+    }
+
+    .main__annualPlan{
+        padding: 20px;
+    }
+
+    .annualPlan__containerParagraph{
+        font-size: .9em;   
+        margin-right: 50px;
+    }
+
+    .proceedToPay__btt{
+        font-size: .8em;
+        height: 55px;
+        margin-bottom: 15px;
+        transition: .2s linear background-color;
+    }
+
+    .proceedToPay__btt:active{
+        background-color: var(--activeColor);
+    }
+
+    .annualPlan__link-active{
+        transition: .1s linear color;
+    }
+    .annualPlan__link-active:active{
+        color: var(--activeColor);
+        text-decoration: none;
+    }
+
+    .cancelOrder__link{
+        font-size: .8em;
+        transition: all linear .1s;
+    
+    }
+
+    .cancelOrder__link:active{
+        color: gray;
+        font-size: .9em;
+        font-weight: 900;
     }
 }
 
