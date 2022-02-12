@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bodyColor: hsl(225, 100%, 94%)
+    --textColor: hsl(224, 23%, 55%);
+}
+
+html,body{
+    height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--bodyColor);
+font-family: 'Red Hat Display', sans-serif;
+background:url(./images/pattern-background-mobile.svg) center/cover ;
+
+}
+
+
+ /* mobile width*/
+
+@media (min-width: 375px){
+    .main__body-flex{
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        max-width: 100%;
+    }
+
+    .main__cardBody{
+        margin: 30px 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+    }
+   
+.main__imgContainer{
+    height: 28%;
+}
+    .main__img{
+    width: 100%;
+    height: 100%;
+       
+    }
+    .main__orderSummary{
+ 
+        font-size: 1.1em;
+        text-align: center;
+        margin: 30px;
+    }
+    .orderSummary__title{
+       padding: 10px;
+    
+     
+    }
+   .orderSummary_paragraph{
+       font-size: .8em;
+       color:  var(--textColor) ;}
+
+    .main__annualPlan{
+
+        background-color: rgba(0 0 0 /.05);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin:30px;
+        padding: 8px;
+       
+
+    }
+    .annualPlan__icon{
+        height: 50px;
+
+    }
+  
+    .containerParagraph__paragraph{
+        color: var(--textColor)
+    }
+
+    
+
+    .main__proceedToPay{
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .proceedToPay__btt{
+        background-color: purple;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        border-radius: 20px;
+       box-shadow:rgb(37 87 195/.4) 0 20px 80px 10px;
+       color: whitesmoke;
+       cursor: pointer;
+       width: 90%;
+       height: 60px;
+
+
+   
+    }
+
+    .main__cancelOrder{
+      
+        text-align: center;
+        margin-bottom: 30px;
+    }
+   
+.cancelOrder__link{
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+
+/* Desktop width */
+
+@media (min-width: 1440px){
+    body{
+        color: red
+    }
+}
+
