@@ -7,7 +7,8 @@
     --bodyColor: hsl(225, 100%, 94%);
     --textColor: hsl(224, 23%, 55%);
     --shadowColor:  hsl(224,  100%, 90%);
-    --activeColor: rgb(219, 109, 219);
+    --activeColor:   hsl(245, 75%, 70%);
+    --darkBlue:hsl(245, 75%, 52%);
 }
 
 html,body{
@@ -20,7 +21,8 @@ html,body{
     background-color: var(--bodyColor);
     font-family: 'Red Hat Display', sans-serif;
     background:url(./images/pattern-background-mobile.svg) center/cover no-repeat ;
-
+    box-shadow: inset 0 0 0 10000px rgba(0 0 340/ .03);
+    
 }
 
 
@@ -105,15 +107,16 @@ html,body{
     }
     
     .proceedToPay__btt{
-        background-color: purple;
+        background-color: var(--darkBlue);
         font-size: 1.2em;
         margin-bottom: 30px;
         border-radius: 20px;
-        box-shadow:rgb(37 87 195/.4) 0 20px 80px 1px;
-        color: whitesmoke;
+        box-shadow:rgb(37 87 195/.4) 0 2px 90px 0;
+        color: white;
         cursor: pointer;
         width: 90%;
         height: 60px;
+        text-shadow: 1px 0 2px black, 0 1px 2px black, -1px 0 2px black, 0 -1px 2px black;
     }
 
     .main__cancelOrder{
